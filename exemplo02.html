@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+    <style>
+        * {
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            padding: .3rem;
+            text-align: right;
+        }
+
+        button {
+            padding: .45rem 1rem;
+            background-color: rgb(255, 225, 56);
+            color: white;
+            border: none;
+        }
+
+        .resposta {
+
+            width: 40rem;
+            min-height: 25rem;
+            display: flex;
+            margin: 2rem auto;
+            flex-wrap: wrap;
+            border: 1px solid #a3a0a0;
+            box-shadow: 0.5rem 0.5rem .3rem .01rem #a3a0a0;
+            justify-content: center;
+            align-items: center;
+        }
+        .item {
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            color: green;
+            background-color: burlywood;
+            width: 11rem;
+            height: 5rem;
+            display: flex;
+            margin: 1rem auto;
+            border: 1px solid #a3a0a0;
+            box-shadow: .5rem .5rem .3rem .01rem #a3a0a0;
+        }
+        .entrada {
+         width: 40rem;
+         margin: 2rem auto;   
+        }
+        .input {
+            padding: .3rem;
+            text-align: right;
+        }
+
+    </style>
+</head>
+
+<body>
+    Numero: <input type="number" class="entrada" id="numero">
+    <button onclick="processar()">OK</button>
+    <div id="resp" class="resposta">
+
+    </div>
+
+    <script>
+        /*
+        Estrutura de repetiçao: while
+        Entrada/saida de dados
+        Variável
+        */
+        function processar() {
+            var i = 0, num = parseInt(document.getElementById("numero").value);
+
+            while (i <= num) {
+                document.getElementById("resp").innerHTML += `<div class="item">${i}</div>`;
+                i++;
+            }
+        }
+    </script>
+</body>
+
+</html>
